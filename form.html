@@ -8,11 +8,18 @@
 <style>
     body {
   font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  background:#f2f2f2;
   display: flex;
   justify-content: center;
 
   height: 100vh;
+}
+form{
+    background-color: blanchedalmond;
+    padding: 25px;
+    border-radius: 20px;
+    width: 400px;
+    box-shadow: 0 0 15px;
 }
 </style>
 <body>
@@ -39,6 +46,31 @@
         <input type="checkbox" value="html2">UG
         <input type="checkbox" value="html2">Class 12th
         <input type="checkbox" value="html2">Class 10th
+        <br><br>
+        <label for="D.O.B : ">D.O.B :
+            <input type="date">
+
+        </label>
+        <br><br>
+        <label for="">Upload Marksheet :
+            <input type="file">
+        </label>
+        <br><br>
+        <label for="">Branch :
+            <select name="" id="">
+                <option value="">IT</option>
+                <option value="">CSE</option>
+                <option value="">AIML</option>
+                <option value="">DS</option>
+                <option value="">ME</option>
+                <option value="">ECE</option>
+
+                <option value="">CE</option>
+            </select>
+        </label>
+        <br><br>
+
+        <button>Submit</button> <button>Reset</button>
      
     </form>
 </body>
