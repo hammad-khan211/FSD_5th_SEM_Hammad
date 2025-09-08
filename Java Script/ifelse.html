@@ -7,14 +7,30 @@
 </head>
 <body>
     <script>
-        let x=prompt("Plz enter your age : ");
+       
+            let x = prompt("Enter first number : ");
+             let y = prompt("Enter second number : ");
+              let z = prompt("Enter third number : ");
+            if(x>y){
+                if(x>z){
+                    document.writeln(x, "IS THE GREATEST OF ALL THE NUMBERS")
 
-        if(x>=18){
-            document.writeln("You are eligible to vote");
-        }
-        else{
-            document.writeln("!UNDERAGE, You are not eligible to vote");
-        }
+                }
+                else{
+                     document.writeln(z, "IS THE GREATEST OF ALL THE NUMBERS")
+
+                }
+            }
+            else{
+                if(y>z){
+                     document.writeln(y, "IS THE GREATEST OF ALL THE NUMBERS")
+
+                }
+                else{
+                     document.writeln(z, "IS THE GREATEST OF ALL THE NUMBERS")
+
+                }
+            }  
     </script>
 </body>
 </html>
