@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     </style>
 </head>
 <body>
-    <div id="adi"> <button onclick="abes()">Click</button>
+    <div id="adi"> <button onclick="abes()" style="">Click</button>
     <p id="AAA"></p>
 
     </div>
@@ -19,5 +19,38 @@
         document.getElementById("AAA").innerHTML="Hello";
     }
    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="ad">
+    <button onclick="ok()">Click </button>
+ 
+    <button onclick="push()">Push</button>
+     <button onclick="smash()">Smash</button>
+    <button onclick="press()">Press</button>
+
+
+    <script>
+        function ok(){
+            document.getElementById("ad").style.backgroundColor="red";
+        
+        }
+        function push(){
+           document.getElementById("ad").style.backgroundColor="green"; 
+        }
+        function smash(){
+          document.getElementById("ad").style.backgroundColor="yellow";  
+        }
+        function press(){
+          document.getElementById("ad").style.backgroundColor="pink";   
+        }
+    </script>
 </body>
 </html>
