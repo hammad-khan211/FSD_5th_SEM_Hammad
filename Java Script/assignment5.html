@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .navbar{
+        display: flex;
+        width: 100%;
+        height: 10rem;
+        background-color: cadetblue ;
+        align-items:center;
+        justify-content: space-evenly;
+        
+       
+    }
+    .nav_title{
+        font-weight: 700;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2rem;
+    }
+    .logo{
+        border: 5px solid lightblue;
+        
+    }
+    .circle{
+        circle {width:80px;height:80px;border-radius:50%;border:2px solid #000;display:flex;justify-content:center;align-items:center;font-size:24px;margin-bottom:20px}
+    }
+     .boxbutton {width:50px;height:30px;margin:0 10px;font-size:18px}
+     .box{
+         width:300px;height:300px;display:flex;flex-direction:column;justify-content:center;align-items:center;border:1px solid #000;border-radius:10px
+
+     }
+     button {width:50px;height:30px;margin:0 10px;font-size:18px}
+
+</style>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="Gemini_Generated_Image_h16tk6h16tk6h16t.png" height="100" alt="">
+
+        </div>
+        <div class="nav_title">
+           <h1>Counter App</h1> 
+        </div>
+    </div>
+    <center><div class="box">
+        <div class="circle" id="count">0</div>
+    <div>
+      <button onclick="dec()">-</button>
+      <button onclick="inc()">+</button>
+    </div>
+    </center>
+
+
+        
+</div>
+
+     <script>
+    let c=0
+    function inc(){
+      if(c<10){
+        c++
+        document.getElementById("count").innerText=c
+      }else{
+        alert("Maximum value is 10")
+      }
+    }
+    function dec(){
+      if(c>0){
+        c--
+        document.getElementById("count").innerText=c
+      }else{
+        alert("Minimum value is 0")
+      }
+    }
+  </script>
+
+</body>
+</html>
