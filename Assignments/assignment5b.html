@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .cardsbox{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 55rem;
+            background-color: aquamarine;
+        }
+        .card1{
+            width:20rem;
+            background-color: lightblue;
+            border-radius: 10%;
+            height: 35rem;
+        }
+        .card2{
+            width:20rem;
+            background-color: lightgreen;
+            border-radius: 10%;
+            height: 35rem;
+
+        }
+        .card1 button{
+            width:5rem;
+            height: 3rem;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2rem;
+            background-color:pink ;
+           
+        }
+        .card2 button{
+            width:7rem;
+            height: 3rem;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2rem;
+            background-color:yellow ;
+           
+        }
+        img{
+            border-radius: 5%;
+            border:5px solid red;
+        }
+    </style>
+    <div class="cardsbox">
+
+        <div class="card1">
+            <img id="abc" src="/Hammad VS Code 5 sem/FSD_5th_SEM_Hammad/HTML,CSS/pics/bus.png" height="300" alt="">
+            <br><br>
+            <hr>
+            <button onclick="hideit()">Hide</button>
+            
+
+        </div>
+        <div class="card2">
+            <img id="bca" src="/Hammad VS Code 5 sem/FSD_5th_SEM_Hammad/HTML,CSS/pics/pizza-recipe-1.jpg" height="200"  alt="">
+            <hr><br><br>
+            <button onclick="changeit()">Change</button>
+
+
+        </div>
+    </div>
+    <script>
+        function hideit(){
+            document.getElementById("abc").style.display="none";
+        }
+
+        function changeit(){
+            document.getElementById("bca").src="/Hammad VS Code 5 sem/FSD_5th_SEM_Hammad/HTML,CSS/pics/img4.jpeg"
+
+        }
+    </script>
+</body>
+</html>

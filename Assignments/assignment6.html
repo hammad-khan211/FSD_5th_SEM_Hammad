@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Piano with Uploaded Sounds</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      margin-top: 40px;
+    }
+    .piano {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .key {
+      width: 80px;
+      height: 200px;
+      border: 1px solid black;
+      margin: 5px;
+      background: white;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .key:active {
+      background: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <h2>Upload Your Own Sounds for 4-Key Piano</h2>
+
+  <p>Upload sound for each key:</p>
+  <input type="file" id="fileC" accept="audio/*"> C <br>
+  <input type="file" id="fileD" accept="audio/*"> D <br>
+  <input type="file" id="fileE" accept="audio/*"> E <br>
+  <input type="file" id="fileF" accept="audio/*"> F <br><br>
+
+  <div class="piano">
+    <div class="key" data-note="C">C</div>
+    <div class="key" data-note="D">D</div>
+    <div class="key" data-note="E">E</div>
+    <div class="key" data-note="F">F</div>
+  </div>
+
+  <script>
+    const sounds = {};
+
+    function loadSound(input, note) {
+      input.addEventListener('change', function() {
+        const file = this.files[0];
+        if(file){
+          const url = URL.createObjectURL(file);
+          sounds[note] = new Audio(url);
+        }
+      });
+    }
+
+    loadSound(document.getElementById('Hammad VS Code 5 sem/FSD_5th_SEM_Hammad/Assignments/SOUND/b6-82017.mp3'), 'C');
+    loadSound(document.getElementById('fileD'), 'D');
+    loadSound(document.getElementById('fileE'), 'E');
+    loadSound(document.getElementById('fileF'), 'F');
+
+    document.querySelectorAll('.key').forEach(k => {
+      k.addEventListener('click', ()=>{
+        const note = k.dataset.note;
+        if(sounds[note]){
+          sounds[note].currentTime = 0;
+          sounds[note].play();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
