@@ -44,6 +44,14 @@
             background-color:yellow ;
            
         }
+        .card3 button{
+            width:7rem;
+            height: 3rem;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2rem;
+            background-color:brown;
+           
+        }
         img{
             border-radius: 5%;
             border:5px solid red;
@@ -56,6 +64,11 @@
             <br><br>
             <hr>
             <button onclick="hideit()">Hide</button>
+         
+
+           <button onclick="showit()">Show</button>
+             
+
             
 
         </div>
@@ -66,6 +79,7 @@
 
 
         </div>
+
     </div>
     <script>
         function hideit(){
@@ -75,6 +89,9 @@
         function changeit(){
             document.getElementById("bca").src="/Hammad VS Code 5 sem/FSD_5th_SEM_Hammad/HTML,CSS/pics/img4.jpeg"
 
+        }
+        function showit(){
+            document.getElementById("abc").style.display="inline-block";
         }
     </script>
 </body>
