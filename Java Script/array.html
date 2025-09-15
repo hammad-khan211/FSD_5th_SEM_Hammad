@@ -4,12 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #id{
+            font-size: 2rem;
+            font-weight: bold;
+            border: 2px solid black;
+        }
+    </style>
 </head>
 <body>
-    <p id="adi"></p>
+    <p id="id"></p>
     <script>
-        const car=new Array("car11","car22","car33");
-        document.getElementById("adi").innerHTML=car;
+        const arr = [10, 20, 30, 40, 50];
+        
+        const car = new Array("Saab", "Volvo", "BMW");
+        car[1] = "Toyota";
+
+        const person = {
+            firstName: "Anvesh",
+            lastName: "Srivastava",
+            age: 50
+        };
+        const data = new Array(
+         student1 = {
+            name: "aryan",
+            roll_no : 1,
+            class : "btech"
+        },
+         student2 = {
+            name: "anvesh",
+            roll_no : 2,
+            class : "btech"
+        },
+         student3 = {
+            name: "aryan",
+            roll_no : 3,
+            class : "bcom"
+        },
+         student4 = {
+            name: "abhishek",
+            roll_no : 4,
+            class : "bcom"
+        },
+         student5 = {
+            name: "anurag",
+            roll_no : 5,
+            class : "btech"
+        }
+        );
+        for(var i = 0; i < data.length; i++){
+            if(data[i].class == "btech"){
+                document.getElementById("id").innerHTML += data[i].name+ " " + data[i].roll_no+ " " + data[i].class + "<br>";
+            }
+        }
     </script>
 </body>
 </html>
