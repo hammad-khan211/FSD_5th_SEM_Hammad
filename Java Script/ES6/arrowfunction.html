@@ -6,12 +6,21 @@
     <title>Document</title>
 </head>
 <body>
+    <p id="abc"></p>
     <script>
-        function abes(){
-            document.write("We are students of ABES");
-        }
+        // function abes(){
+        //     document.write("We are students of ABES");
+        // }
 
-        abes();
+        // abes();
+
+        let abes =()=> {
+            return "We are student of abes";
+        }
+        document.getElementById("abc").innerHTML=abes();
+        
+
+
     </script>
 </body>
 </html>
