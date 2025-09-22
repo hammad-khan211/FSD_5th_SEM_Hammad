@@ -8,9 +8,12 @@
 <body>
     <button onclick="display()">Click</button>
     <script>
-        let firstname = "Hammad"
+       
         function display(){
-            let x = `Welcome ${firstname}`;
+            let firstname = prompt("Enter your first name");
+            let lastname = prompt("Enter your last name ");
+            // USING LITERALS
+            let x = `Welcome ${firstname} ${lastname}`;
             document.write(x);
 
         }
