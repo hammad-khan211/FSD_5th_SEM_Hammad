@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="abc" style="font-size: 5rem;"></p>
+       <p id="bbc" style="font-size: 5rem;"></p>
+
+    <script>
+        // syntax of class in js
+        class Car {
+            constructor(name,year){
+                this.name = name;
+                this.year = year;
+            }
+        }
+        const mycar1= new Car("Audir8" , 2023);
+        const mycar2 = new Car("Mercedes", 2024);
+        document.getElementById("abc").innerHTML=mycar1.name;
+        document.getElementById("bbc").innerHTML=mycar2.name;
+    </script>
+</body>
+</html>
