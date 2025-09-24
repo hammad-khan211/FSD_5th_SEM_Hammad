@@ -215,6 +215,15 @@
             </td>
         </tr>
         <tr>
+            <td>Programming Languages : </td>
+            <td>
+            <input type="text" name="" id="pl1" placeholder="Programming Language 1">
+            <input type="text" name="" id="pl2" placeholder="Programming Language 2">
+            <input type="text" name="" id="pl3" placeholder="Programming Language 3">
+            <input type="text" name="" id="pl4" placeholder="Programming Language 4">
+            <input type="text" name="" id="pl5" placeholder="Programming Language 5"></td>
+        </tr>
+        <tr>
             <td colspan="2"><button onclick="abes()">SUBMIT</button></td>
         </tr>
 
@@ -240,6 +249,28 @@
             let xadd=inputvalu=document.getElementById("dry");
             let yadd=xadd.value;
             document.getElementById("ddd").innerHTML=yadd;
+
+             let xpl1=inputvalu=document.getElementById("pl1");
+            let ypl1=xpl1.value;
+            document.getElementById("ddd1").innerHTML=ypl1;
+
+             let xpl2=inputvalu=document.getElementById("pl2");
+            let ypl2=xpl2.value;
+            document.getElementById("ddd2").innerHTML=ypl2;
+
+             let xpl3=inputvalu=document.getElementById("pl3");
+            let ypl3=xpl3.value;
+            document.getElementById("ddd3").innerHTML=ypl3;
+
+             let xpl4=inputvalu=document.getElementById("pl4");
+            let ypl4=xpl4.value;
+            document.getElementById("ddd4").innerHTML=ypl4;
+
+             let xpl5=inputvalu=document.getElementById("pl5");
+            let ypl5=xpl5.value;
+            document.getElementById("ddd5").innerHTML=ypl5;
+
+
 
 
         }
@@ -289,11 +320,11 @@
              <div class="skill-category">
             <h3>Programming Languages</h3>
             <ul>
-                <li>Python</li>
-                <li>Java</li>
-                <li>C++</li>
-                <li>JavaScript</li>
-                <li>C</li>
+                <li id="ddd1"></li>
+                <li id="ddd2"></li>
+                <li id="ddd3"></li>
+                <li id="ddd4"></li>
+                <li id="ddd5"></li>
             </ul>
         </div>
         <div class="skill-category">
