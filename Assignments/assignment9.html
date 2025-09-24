@@ -159,15 +159,91 @@
 .project-card img:hover {
     transform: scale(1.05); /* Scales the image up by 5% on hover */
 }
+.input-data{
 
+}
+        table {
+      margin: 50px auto;
+      border-collapse: collapse;
+      width: 40%;
+      font-size: 1rem;
+      color: white;
+      font-family: 'Times New Roman', Times, serif;
+      text-align: center;
+      background-color: #1F3B53;
+      border: 2px solid white;
+    }
+      td, th {
+      border: 1px solid white;
+      padding: 10px;
+    }
 
 
    
 </style>
 <body>
-   
+    <div class="input-data">
+           <table>
+        <tr >
+            <th colspan="5">
+                <b >Registation Page</b>
+            </th>
+        </tr>
+
+        <tr >
+            <th colspan="5" >Fill the details below</th>
+
+        </tr>
+
+        <tr>
+            <td>Name : </td>
+            <td colspan="4"><input type="text" placeholder="Enter your name" id="ary"></td>
+        </tr>
+
+        <tr>
+            <td>Gmail : </td>
+            <td colspan="4"><input type="text" placeholder="Enter your gmail" id="cry"></td>
+        </tr>
+        <tr>
+            <td>Phone Number : </td>
+            <td colspan="4"><input type="text" placeholder="Enter your phone number" id="bry"></td>
+        </tr>
+        <tr>
+            <td>Address : </td>
+            <td>
+                <input type="text" placeholder="Enter your address" id="dry">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><button onclick="abes()">SUBMIT</button></td>
+        </tr>
+
+  
         
+    </table>
+
     </div>
+    <script>
+        function abes(){
+            let x=inputvalu=document.getElementById("ary");
+            let y=x.value;
+            document.getElementById("aaa").innerHTML=y;
+
+            let pnum=inputvalu=document.getElementById("bry");
+            let ynum=pnum.value;
+            document.getElementById("bbb").innerHTML=ynum;
+
+             let xmail=inputvalu=document.getElementById("cry");
+            let ymail=xmail.value;
+            document.getElementById("ccc").innerHTML=ymail;
+
+            let xadd=inputvalu=document.getElementById("dry");
+            let yadd=xadd.value;
+            document.getElementById("ddd").innerHTML=yadd;
+
+
+        }
+    </script>
    <center>
     <div class="container">
         <div class="box1">
@@ -179,17 +255,17 @@
                 <hr>
                 <div class="contact-item">
     <i class="fa-solid fa-phone"></i>
-    <span>+91-9517538797</span>
+    <span id="bbb"></span>
 </div>
 
 <div class="contact-item">
     <i class="fa-solid fa-envelope"></i>
-    <span>ahmadhammadkhan21112005@gmail.com</span>
+    <span id="ccc"></span>
 </div>
 
 <div class="contact-item">
     <i class="fa-solid fa-location-dot"></i>
-    <span>ABES Engineering  College , Ghaziabad</span>
+    <span id="ddd"></span>
 </div>
 
 <div class="contact-item">
@@ -261,7 +337,7 @@
        <div class="box2name">
         
         
-         <p style=" color: #1F3B53; font-weight: 600; margin-top: 40px;">Ahmad Hammad Khan</p>
+         <p style=" color: #1F3B53; font-weight: 600; margin-top: 40px; " id="aaa"></p>
          <p style="color: #777777; font-size: 2rem; margin-top: 20px;border: 1px solid #1F3B53;">IT ENGINEER</p>
         </div> <br>
         <div class="box2sec">
