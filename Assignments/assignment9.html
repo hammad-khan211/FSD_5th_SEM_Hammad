@@ -177,7 +177,15 @@
       border: 1px solid white;
       padding: 10px;
     }
+    table button{
+        font-size: 2rem;
+        border-radius: 12px;
+        color: #1F3B53;
+        border: 5px solid black;
+        font-family: Georgia, 'Times New Roman', Times, serif;
 
+    }
+  
 
    
 </style>
@@ -214,6 +222,12 @@
                 <input type="text" placeholder="Enter your address" id="dry">
             </td>
         </tr>
+         <tr>
+            <td>Website Link : </td>
+            <td>
+                <input type="text" placeholder="Enter your website link" id="wl">
+            </td>
+        </tr>
         <tr>
             <td>Programming Languages : </td>
             <td>
@@ -222,6 +236,23 @@
             <input type="text" name="" id="pl3" placeholder="Programming Language 3">
             <input type="text" name="" id="pl4" placeholder="Programming Language 4">
             <input type="text" name="" id="pl5" placeholder="Programming Language 5"></td>
+        </tr>
+
+         <tr>
+            <td>Web Technologies : </td>
+            <td>
+            <input type="text" name="" id="w1" placeholder="WEBD">
+            <input type="text" name="" id="w2" placeholder="WEBD">
+            <input type="text" name="" id="w3" placeholder="WEBD">
+            <input type="text" name="" id="w4" placeholder="WEBD">
+            <input type="text" name="" id="w5" placeholder="WEBD"></td>
+        </tr>
+        <tr>
+            <td>Profile :</td>
+            <td>
+                <input type="text" id="prof" placeholder="Enter your profile summary">
+
+            </td>
         </tr>
         <tr>
             <td colspan="2"><button onclick="abes()">SUBMIT</button></td>
@@ -270,6 +301,37 @@
             let ypl5=xpl5.value;
             document.getElementById("ddd5").innerHTML=ypl5;
 
+            
+             let xw1=inputvalu=document.getElementById("w1");
+            let yw1=xw1.value;
+            document.getElementById("www1").innerHTML=yw1;
+
+             let xw2=inputvalu=document.getElementById("w2");
+            let yw2=xw2.value;
+            document.getElementById("www2").innerHTML=yw2;
+
+             let xw3=inputvalu=document.getElementById("w3");
+            let yw3=xw3.value;
+            document.getElementById("www3").innerHTML=yw3;
+
+             let xw4=inputvalu=document.getElementById("w4");
+            let yw4=xw4.value;
+            document.getElementById("www4").innerHTML=yw4;
+
+             let xw5=inputvalu=document.getElementById("w5");
+            let yw5=xw5.value;
+            document.getElementById("www5").innerHTML=yw5;
+
+             let xprof=inputvalu=document.getElementById("prof");
+            let yprof=xprof.value;
+            document.getElementById("ppp1").innerHTML=yprof;
+
+              let xwl=inputvalu=document.getElementById("wl");
+            let ywl=xwl.value;
+            document.getElementById("wl1").innerHTML=ywl;
+
+
+
 
 
 
@@ -301,7 +363,7 @@
 
 <div class="contact-item">
     <i class="fa-solid fa-globe"></i>
-    <span><a href="https://ahmad-hammad-khan-portfolio.netlify.app/" style="color: white; text-decoration: none;">Visit My Website</a></span>
+    <a href="https://ahmad-hammad-khan-portfolio.netlify.app/" id="wl1" style="text-decoration: none; color: white;"></a>
 </div>
        
         <h1>EDUCATION</h1>
@@ -330,11 +392,11 @@
         <div class="skill-category">
             <h3>Web Technologies</h3>
             <ul>
-                <li>HTML5 </li>
-                <li>JavaScript (ES6+)</li>
-                <li>React.js</li>
-                <li>CSS</li>
-                <li>Django</li>
+                <li id="www1"></li>
+                <li id="www2"></li>
+                <li id="www3"></li>
+                <li id="www4"></li>
+                <li id="www5"></li>
             </ul>
         </div>
         <div class="skill-category">
@@ -374,7 +436,7 @@
         <div class="box2sec">
              <p>PROFILE</p>
              <hr style="margin-top: 0%;border: 2px solid #1F3B53;"">
-             <span>Greetings. I'm Ahmad Hammad Khan, a third-year B.Tech student in Information Technology at ABES Engineering College, Ghaziabad. My fascination with technology isn't just about code—it's about the challenge of turning complex problems into elegant solutions. This portfolio is a showcase of my work, knowledge, and journey as a developer.I am the son of Ahmad Fuzail Khan and am committed to a path of continuous learning and growth.</span>
+             <span id="ppp1"></span>
              <p style="margin-top: 30px;">PROJECTS</p>
             <div class="project-logs-content">
                 </div>
