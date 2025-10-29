@@ -1,0 +1,19 @@
+#adi{
+    border: 5px solid red;
+    height: 300px;
+    width: 300px;
+    background-color: coral;
+    align-items: center;
+    
+    
+}
+
+#container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+img{
+    border-radius: 50%;
+}
+

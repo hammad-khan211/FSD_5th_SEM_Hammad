@@ -1,0 +1,15 @@
+#na{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    background-color: pink;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 5px solid black;
+
+
+}
+
+img{
+    border-radius: 50%;
+}
