@@ -2,19 +2,19 @@ button{
     color: white;
     align-items: ;
     margin: auto;
-    height: 10rem;
+    height: 5rem;
     background-color: red;
-    width: 30%;
-    font-size: 5rem;
+    width: 10%;
+    font-size: 3rem;
     border-radius: 15px;
     font-family:'Times New Roman', Times, serif;
-    border: 10px solid purple;
+    border: 10px solid black;
 
 
-}
+}  
 button:hover {
-  background-color: darkred; 
+  background-color: green; 
   color: black; 
-  border: 10px solid blue;
+  border: 10px solid black;
    transition: background-color 0.5s ease, color 0.5s ease;
 }

@@ -1,0 +1,74 @@
+/* Book.css — Light Pastel Theme */
+:root {
+  --card-bg: linear-gradient(180deg, #ffffff 0%, #f9fcff 100%);
+  --accent: #6a5acd; /* soft lavender blue */
+  --muted: #737373;
+  --shadow: 0 6px 20px rgba(100, 100, 111, 0.1);
+  --radius: 16px;
+}
+
+body {
+  background: #fdfdff;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#book {
+  width: 320px;
+  margin: 20px auto;
+  padding: 18px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+#book:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(106, 90, 205, 0.15);
+}
+
+#book img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+#book h1:first-of-type {
+  margin: 8px 0 0 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  text-align: center;
+}
+
+#book h1:nth-of-type(2) {
+  margin: 4px 0 8px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(106, 90, 205, 0.08);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+@media (max-width: 420px) {
+  #book {
+    width: calc(100% - 40px);
+    padding: 14px;
+  }
+}
+.bookcon{
+    display: flex;
+}
