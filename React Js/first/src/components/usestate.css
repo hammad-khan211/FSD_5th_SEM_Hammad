@@ -1,0 +1,20 @@
+button{
+    color: white;
+    align-items: ;
+    margin: auto;
+    height: 10rem;
+    background-color: red;
+    width: 30%;
+    font-size: 5rem;
+    border-radius: 15px;
+    font-family:'Times New Roman', Times, serif;
+    border: 10px solid purple;
+
+
+}
+button:hover {
+  background-color: darkred; 
+  color: black; 
+  border: 10px solid blue;
+   transition: background-color 0.5s ease, color 0.5s ease;
+}
