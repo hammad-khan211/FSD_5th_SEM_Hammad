@@ -28,7 +28,7 @@
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 28px;
+  gap: 88px;
 }
 
 .nav-links li a {
@@ -40,6 +40,10 @@
 
 .nav-links li a:hover {
   color: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: 15px;
+  padding: 10px;
+  transform: translateY(-5px);
 }
 
 .nav-btn {
@@ -55,6 +59,7 @@
 
 .nav-btn:hover {
   background: #5b4acb;
+ 
 }
 
 /* Responsive navbar */
