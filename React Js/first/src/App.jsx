@@ -1,26 +1,32 @@
-import React from 'react'
-import Card from "./components/Card";
+import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
-import Usestate from "./components/Usestate";
+import Fashion from "./components/Fashion";
 
+function App() {
+  const [products, setProducts] = useState([]);
 
-function App  (){
+  useEffect(() => {
+    // Fetch products from multiple API endpoints for more variety
+    Promise.all([
+      fetch("https://fakestoreapi.com/products").then(res => res.json()),
+      fetch("https://fakestoreapi.com/products/category/men's clothing").then(res => res.json()),
+      fetch("https://fakestoreapi.com/products/category/women's clothing").then(res => res.json())
+    ])
+      .then(([all, men, women]) => {
+        // Combine all products (and remove duplicates)
+        const merged = [...all, ...men, ...women];
+        const unique = Array.from(new Map(merged.map(p => [p.id, p])).values());
+        setProducts(unique);
+      })
+      .catch(err => console.error("Error fetching products:", err));
+  }, []);
+
   return (
     <div>
-      {/* <Navbar/>
-      <br />
-      <center><h1>Our Menu</h1></center>
-
-      <div id="container">
-        <Card src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" name="Pizza" price={1800}/>
-      
-      <Card src="https://images.squarespace-cdn.com/content/v1/670ded352076ec49dde54c02/1728965942155-XUX1IGH7B2FLEY21TJ7S/nobg.png" name="Burgur" price={2000}/>
-      
-      <Card src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/uvxaliwhse0xduvnqkcw" name="Coke" price={200}/>
-      </div> */}
-      <Usestate></Usestate>
+      <Navbar />
+      <Fashion products={products} />
     </div>
-  )
+  );
 }
 
 export default App;
