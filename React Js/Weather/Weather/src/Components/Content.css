@@ -1,39 +1,79 @@
+/* Content.css */
+
 .content {
-  background: linear-gradient(135deg, #141e30, #243b55);
+  background: linear-gradient(180deg, #e6f2ff, #ffffff);
   min-height: 100vh;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px 20px;
-  color: white;
   font-family: "Poppins", sans-serif;
+  color: #333;
+  padding: 60px 20px;
 }
 
-/* Elegant weather card */
 .content-container {
+  background: #ffffff;
+  border: 1px solid #d0d7de;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 40px 50px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.07);
-  padding: 60px 80px;
-  border-radius: 24px;
-  box-shadow: 0 0 40px rgba(255, 105, 180, 0.4),
-              inset 0 0 15px rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  transition: all 0.4s ease;
-  width: 90%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 1200px;
+  transition: transform 0.2s ease;
 }
 
 .content-container:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 60px rgba(255, 20, 147, 0.5),
-              inset 0 0 25px rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
 }
 
 .content-title {
-  font-size: 2.2rem;
-  margin-bottom: 25px;
-  color: #ff66cc;
-  text-shadow: 0 0 10px #ff00c8, 0 0 20px #ff33ff;
+  color: #007acc;
+  font-size: 28px;
+  margin-bottom: 30px;
   font-weight: 600;
+  border-bottom: 2px solid #cce7ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* ✅ Weather Grid Layout */
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* ✅ Each Weather Card */
+.weather-card {
+  background: #ffffff;
+  border: 1px solid #d0d7de;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.weather-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.weather-card h3 {
+  color: #007acc;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.weather-card p {
+  color: #444;
+  margin: 6px 0;
+  font-weight: 500;
+}
+
+.error-card {
+  background: #ffeaea;
+  border: 1px solid #ffb3b3;
 }

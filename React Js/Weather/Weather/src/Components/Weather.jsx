@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-function Weather() {
+function Weather({ city }) {
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchWeatherData = async () => {
-      const apiKey = "WZKYWYEVPPCSNQZPJ7KNNF9TN"; // ✅ your Visual Crossing key
-      const location = "Delhi,IN"; // you can change city here
+      const apiKey = "WZKYWYEVPPCSNQZPJ7KNNF9TN";
+      const location = city || "Delhi,IN";
       const unitGroup = "metric";
       const contentType = "json";
 
@@ -22,7 +22,6 @@ function Weather() {
         }
 
         const weatherData = await response.json();
-        console.log(weatherData); // view full API response in console
         setWeather(weatherData);
       } catch (errorResponse) {
         console.error("Error fetching weather:", errorResponse);
@@ -31,27 +30,27 @@ function Weather() {
     };
 
     fetchWeatherData();
-  }, []);
+  }, [city]);
 
   if (error) {
     return (
-      <div style={{ textAlign: "center", marginTop: "20px", color: "red" }}>
-        {error}
+      <div className="weather-card error-card">
+        <p style={{ color: "red" }}>{error}</p>
       </div>
     );
   }
 
   return (
-    <div style={{ textAlign: "center", marginTop: "20px" }}>
+    <div className="weather-card">
       {weather ? (
         <>
-          <h2>{weather.resolvedAddress} Weather</h2>
+          <h3>{weather.resolvedAddress}</h3>
           <p>🌡️ Temp: {weather.currentConditions?.temp}°C</p>
           <p>💧 Humidity: {weather.currentConditions?.humidity}%</p>
           <p>🌥️ {weather.currentConditions?.conditions}</p>
         </>
       ) : (
-        <p>Loading weather...</p>
+        <p>Loading...</p>
       )}
     </div>
   );

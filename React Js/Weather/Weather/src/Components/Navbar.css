@@ -1,41 +1,38 @@
+/* Navbar.css */
+
 .navbar {
+  background: linear-gradient(90deg, #e6f2ff, #ffffff); /* light blue to white gradient */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 60px;
-  background: linear-gradient(90deg, #0d0d0d, #1a1a1a);
-  box-shadow: 0 4px 25px rgba(255, 20, 147, 0.5);
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  padding: 15px 60px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* soft shadow */
+  border-bottom: 1px solid #d0d7de; /* subtle grey border */
+  font-family: "Poppins", sans-serif;
 }
 
 .logo {
-  color: #fff;
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 600;
+  color: #007acc; /* soft blue */
   letter-spacing: 1px;
-  text-shadow: 0 0 10px #ff1493, 0 0 20px #ff66cc;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links li a {
-  color: #fff;
+.nav-links a {
   text-decoration: none;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  padding: 8px 14px;
-  border-radius: 12px;
+  color: #555; /* grey text */
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
-  color: #ff1493;
-  border: 2px solid #ff1493;
-  text-shadow: 0 0 10px #ff1493, 0 0 20px #ff66cc;
-  box-shadow: 0 0 15px #ff1493, 0 0 30px #ff66cc;
+.nav-links a:hover {
+  color: #007acc; /* blue hover */
 }
