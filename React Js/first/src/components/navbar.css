@@ -27,15 +27,16 @@
 }
 
 .navbar-logo h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #3b2f2f; /* deep brownish text for contrast */
   font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
   letter-spacing: 1px;
 }
 
 .nav-links {
   list-style: none;
-  display: flex;
+  display: flex;  
   gap: 30px;
 }
 
@@ -43,15 +44,23 @@
   text-decoration: none;
   color: #3b2f2f; /* dark rose-brown text */
   font-weight: 500;
-  font-size: 1rem;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, 
   padding-bottom: 4px;
+  
 }
 
 .nav-links li a:hover {
-  color: #c2185b; /* darker pink hover */
-  border-bottom: 2px solid #c2185b;
+  color: #ff1493; /* neon pink */
+  border: 2px solid #ff1493;
+  padding: 5px;
+  background-color: black;
+  border-radius: 15px;
+  text-shadow: 0 0 8px #ff1493, 0 0 15px #ff66cc; /* glowing text */
+  box-shadow: 0 0 10px #ff1493, 0 0 20px #ff66cc; /* glowing border */
+  transition: all 0.3s ease;
 }
+
 
 /* Responsive Navbar */
 @media (max-width: 768px) {
