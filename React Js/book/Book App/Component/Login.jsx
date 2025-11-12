@@ -1,5 +1,6 @@
 // src/Component/Login.jsx
 import React from "react";
+import "./Login.css"
 
 const Login = () => {
   return (

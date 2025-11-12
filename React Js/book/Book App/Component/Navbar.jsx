@@ -1,6 +1,6 @@
 // src/Component/Navbar.jsx
 import React from "react";
-import "./Navbar.css";
+import "./navbar.css";
 import {Routes,Route,Link} from 'react-router-dom'
 
 function Navbar() {
