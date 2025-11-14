@@ -12,7 +12,7 @@
 }
 
 .content-container {
-  background: #ffffff;
+  background: #ffffff; 
   border: 1px solid #d0d7de;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
@@ -53,6 +53,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   padding: 20px;
   text-align: center;
+  
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
